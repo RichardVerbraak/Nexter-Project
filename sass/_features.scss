@@ -1,0 +1,36 @@
+.features {
+    grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+
+    // each col should be 25rem minimum, if it cant fit then it automatically becomes 2 columns
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    
+    // The features with less text are trying to fill the entire container due to align-items being default to stretch
+    // but we want all of them to start at the top of the grid cell
+    align-items: start;
+}
+
+// you usually dont define the rows, we just want them to be the size of the content (template rows set to auto by default so no need)
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
+}

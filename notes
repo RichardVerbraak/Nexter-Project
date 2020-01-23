@@ -1,0 +1,46 @@
+SECTION ON GRID LAYOUT
+
+CODEPEN
+    Intro: https://codepen.io/richardverbraak/pen/YzPReBg
+    Challenge: https://codepen.io/richardverbraak/pen/MWYzXKy
+    Implicit vs Explicit Grid: https://codepen.io/richardverbraak/pen/LYEXMwj
+    Grid min-max: https://codepen.io/richardverbraak/pen/KKwbzYg
+
+INTRO TO GRID
+    Use display: grid to make a grid layout
+    Items inside the grid container are called grid items like flexbox items
+    You have the column axis (y) and the row axis(x)
+    Grid line is what separates the grid rows and columns from each other
+    The actual space between those rows is called a gutter
+    Space between 2 grid lines is called a track
+    The area between two vertical and two horizontal grid lines is called a grid area (?)
+    The item between 2 adjacent row lines and column lines is called a cell
+
+Handy Emmet Trick
+    $ gives you from 1 - 6 instead of just one number (this is 6 items with with the classes of item and item--number)
+    .container>.item.item--$*6
+    also > .home{Home card $}*6 gives Home card 1 to Home card 6
+
+FR Unit
+    Fractional unit that is the same like flex-grow or setting flex: 1
+    It takes up all the available space and you can double it to take up double the amount of space
+    When the container shrinks the FR unit also always fits the content so it doesnt overflow, see last codepen with minmax
+
+grid-row and grid-column to specify where an item should be positioned (based on row/column lines)
+If you choose a higher number then that element will simply occupy more space and a new line will be created automatically (implicit grid)
+
+You can have multiple grid items in the same cell overlaying each other if both are explicitly positioned by you
+For example having both items on the first row and in the between column line 1 and 2 (see codepen.io)
+Can also be changed with z-index
+
+Implicit vs Explicit Grid
+    Implicit is what you've specified in the grid-template-rows/columns
+    Explicit is what automatically gets assigned
+    You can change the style of the explicit grids with the word auto i.e. grid-auto-rows: 80px
+    You can also change how the explicit grid gets added, in rows or columns with grid-auto-flow (rows is default)
+
+Columns are usually named and not the rows, the rows are usually made to just fit the content
+
+1 / -1 means not to the actual end but to the end of the EXPLICIT grid
+
+NOTE: Confused on align-items - align-content and same for justify-items - justify-content (used like in Flexbox but is in reverse for grid?)

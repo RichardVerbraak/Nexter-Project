@@ -1,0 +1,9 @@
+.gallery {
+    background-color: $color-grey-light-1;
+    grid-column: full-start / full-end;
+    
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    // Could also set this container (gallery) to a preset height like 80rem and then use 1fr on the rows so it gives them all equal space
+    grid-template-rows: repeat(7, 5vw);
+}
