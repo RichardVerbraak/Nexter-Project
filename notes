@@ -43,4 +43,7 @@ Columns are usually named and not the rows, the rows are usually made to just fi
 
 1 / -1 means not to the actual end but to the end of the EXPLICIT grid
 
+! The most important thing is to give the best units for your grid-template columns and rows such as min / max content, 1fr etc.
+
 NOTE: Confused on align-items - align-content and same for justify-items - justify-content (used like in Flexbox but is in reverse for grid?)
+align/justify-items is for each individual item in a cell

@@ -1,4 +1,35 @@
 .realtors {
     background-color: $color-secondary;
     grid-column: col-start 7 / full-end;
+    padding: 3rem;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    // centering for the header doesn't change the other items because they are set to max-content, they define the width of the container so it has no effect on those
+    justify-items: center;
+    grid-row-gap: 2rem;
+
+    // max content for text so you dont have any line-breaks 
+    &__list {
+        display: grid;
+        align-items: center;
+        grid-template-columns: min-content max-content;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+    }
+
+    // set to block to again on imgs so there is no whitespace issues
+    &__img {
+        width: 7rem;
+        border-radius: 50%;
+        display: block;
+    }
+
+    &__sold {
+        text-transform: uppercase;
+        color: $color-grey-light-2;
+    }
 }
