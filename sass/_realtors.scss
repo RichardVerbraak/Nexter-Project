@@ -11,14 +11,27 @@
     justify-items: center;
     grid-row-gap: 2rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+
     // max content for text so you dont have any line-breaks 
     &__list {
         display: grid;
         align-items: center;
         grid-template-columns: min-content max-content;
-        grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 2rem;
         grid-row-gap: 5vh;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+            column-gap: 3.5rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: min-content max-content;
+            row-gap: 2rem;
+        }
     }
 
     // set to block to again on imgs so there is no whitespace issues

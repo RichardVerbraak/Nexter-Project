@@ -17,6 +17,8 @@ $font-display: 'Josefin Sans', sans-serif;
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px
 $bp-large: 56.25em; // 900px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
 
 *,
 *::before,
@@ -60,6 +62,12 @@ body {
         [full-start] minmax(6rem, 1fr) 
         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
         minmax(6rem, 1fr) [full-end];
+    }
 
+    // We use calc to count for the header so the next section will appear right when you scroll down
+    // previously had  min-content min-content min-content repeat(3, min-content) after the header one but no need because min-content is done automatically
+    // it changes size based on the content by auto
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 6rem);
     }
 }
