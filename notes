@@ -34,8 +34,8 @@ For example having both items on the first row and in the between column line 1 
 Can also be changed with z-index
 
 Implicit vs Explicit Grid
-    Implicit is what you've specified in the grid-template-rows/columns
-    Explicit is what automatically gets assigned
+    Explicit is what you've specified in the grid-template-rows/columns
+    Implicit is what automatically gets assigned
     You can change the style of the explicit grids with the word auto i.e. grid-auto-rows: 80px
     You can also change how the explicit grid gets added, in rows or columns with grid-auto-flow (rows is default)
 

@@ -55,7 +55,7 @@ body {
         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
         minmax(6rem, 1fr) [full-end];
     
-
+    // Sidebar moved top of screen
     @media only screen and (max-width: $bp-large) {
         grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
         grid-template-columns: 
